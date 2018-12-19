@@ -6,11 +6,12 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/19 19:10:28 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/19 20:06:47 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		=		ft_read.c
+SRCS		=		ft_read.c	\
+					main.c
 LIBFT		=		libft/
 OBJ			=		$(SRCS:.c=.o)
 CC			=		gcc -Wall -Wextra -Werror

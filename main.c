@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/19 20:07:58 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/19 20:26:17 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "libft/libft.h"
+#include "push_swap.h"
 
-typedef struct		s_data
+int		main(int ac, char **av)
 {
-	t_list	*list;
-	int		n_inst;
-}					t_data;
-void				ft_read_stdin(t_data *data);
-#endif
+	t_data	*data;
+
+	if (!(data = (t_data*)ft_memalloc(sizeof(t_data))))
+		return (0);
+	ft_read_stdin(data);
+	ft_print_list(&data->list);
+	(void)ac;
+	(void)av;
+	return (0);
+}

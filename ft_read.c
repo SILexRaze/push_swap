@@ -6,33 +6,33 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/19 19:09:30 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/19 21:06:40 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
-void	ft_read_stdin(t_data *stack)
+void	ft_read_stdin(t_data *data)
 {
 	char	*line;
 
 	line = NULL;
 	while (get_next_line(0, &line) > 0)
 	{
-		ft_list_pushback(&stack->list, ft_strdup(line), ft_strlen(line));
+		ft_list_pushback(&data->list, ft_strdup(line), ft_strlen(line));
 		ft_strdel(&line);
-		stack->n_inst++;
+		data->n_inst++;
 	}
 }
 
-int		main(void)
+void	ft_parse_inst(t_data *data)
 {
-	t_data	*stack;
+	t_list	*tmp;
 
-	if (!(stack = (t_data*)ft_memalloc(sizeof(t_data))))
-		return (0);
-	ft_read_stdin(stack);
-	ft_print_list(&stack->list);
-	return (0);
+	tmp = data->list;
+	while (tmp)
+	{
+		
+	}
 }
