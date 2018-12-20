@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/19 21:06:40 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/20 14:18:07 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,24 @@ void	ft_read_stdin(t_data *data)
 void	ft_parse_inst(t_data *data)
 {
 	t_list	*tmp;
+	size_t	j;
 
 	tmp = data->list;
+	data->base = ft_init_inst_db();
 	while (tmp)
 	{
-		
+		j = 0;
+		while (data->base[j])
+		{
+			if (ft_strequ(data->base[j], tmp->data) == 1)
+			{
+				printf("|%zu|\n", j);
+				break ;
+			}
+			else if (j == 10)
+				ft_error();
+			j++;
+		}
+		tmp = tmp->next;
 	}
 }

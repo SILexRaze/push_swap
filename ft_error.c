@@ -1,27 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 13:55:04 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/20 14:17:01 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/20 14:17:44 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		main(int ac, char **av)
+void	ft_error(void)
 {
-	t_data	*data;
-
-	if (!(data = (t_data*)ft_memalloc(sizeof(t_data))))
-		return (0);
-	ft_read_stdin(data);
-	ft_print_list(&data->list);
-	ft_parse_inst(data);
-	(void)ac;
-	(void)av;
-	return (0);
+	write(2, "Error\n", 6);
+	exit(0);
 }

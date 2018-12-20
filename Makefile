@@ -6,11 +6,12 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/19 20:06:47 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/20 13:48:30 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=		ft_read.c	\
+					ft_init.c	\
 					main.c
 LIBFT		=		libft/
 OBJ			=		$(SRCS:.c=.o)
