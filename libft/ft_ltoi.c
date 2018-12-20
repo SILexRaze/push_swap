@@ -1,20 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_ltoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 23:28:52 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 15:02:10 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/20 14:36:58 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/20 14:37:13 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+long	ft_ltoi(const char *str)
 {
-	if (c > 47 && c < 58)
-		return (1);
-	return (0);
+	int			neg;
+	long long	nbr;
+
+	neg = 1;
+	nbr = 0;
+	while (*str == '\b' || *str == '\f' || *str == '\n' || *str == '\t'
+			|| *str == '\v' || *str == '\r' || *str == 32)
+		str++;
+	if (*str == '-' || *str == '+')
+		if (*str++ == '-')
+			neg = -1;
+	while (*str > 47 && *str < 58)
+		nbr = nbr * 10 + *str++ - 48;
+	return (neg * nbr);
 }

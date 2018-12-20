@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/19 18:48:34 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/20 15:03:47 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCS		=		ft_memcpy.c			ft_bzero.c			ft_memset.c		\
 					ft_print_tab_str.c	ft_print_tab_int.c	ft_max.c		\
 					ft_sqrt.c			ft_split.c			ft_list_size.c	\
 					ft_strjoind.c		ft_list_del.c		ft_strdjoind.c	\
-					ft_print_list.c
+					ft_print_list.c		ft_ltoi.c			ft_strisdigit.c
 OBJ			=		$(SRCS:.c=.o)
 CC			=		gcc -Wall -Wextra -Werror
 NAME		=		libft.a
@@ -48,9 +48,9 @@ $(NAME): $(OBJ)
 	echo "\n$(_WHITE)$(NAME)$(_GREEN)\t\t[OK]$(_END)"
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean:	clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re:	fclean $(NAME)

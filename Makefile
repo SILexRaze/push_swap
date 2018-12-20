@@ -6,12 +6,14 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/20 13:48:30 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/20 14:57:03 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		=		ft_read.c	\
 					ft_init.c	\
+					ft_stack.c	\
+					ft_error.c	\
 					main.c
 LIBFT		=		libft/
 OBJ			=		$(SRCS:.c=.o)
@@ -28,11 +30,11 @@ $(NAME): $(OBJ)
 	$(CC) -I $(LIBFT) -I . -c $< -o $@
 
 clean:
-	rm -rf $(OBJ)
-	make clean -C $(LIBFT)
+	@rm -rf $(OBJ)
+	@make clean -C $(LIBFT)
 
 fclean:	clean
-	rm -f $(NAME)
-	make fclean -C $(LIBFT)
+	@rm -f $(NAME)
+	@make fclean -C $(LIBFT)
 
 re:	fclean all

@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 17:49:46 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/19 18:55:30 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/20 15:02:36 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,15 +85,17 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_isalpha(int c);
-int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_isdigit(int c);
+int					ft_strisdigit(char	*str);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_atoi(const char *str);
+long				ft_ltoi(const char *str);
 t_list				*ft_create_elem(char *data, int len);
 
 #endif
