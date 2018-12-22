@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:44:07 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 14:57:31 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/22 17:50:56 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ t_stack	*ft_stack_create_elem(int data)
 {
 	t_stack	*new;
 
-	if (!(new = (t_stack*)malloc(sizeof(t_stack))))
+	if (!(new = (t_stack*)ft_memalloc(sizeof(t_stack))))
 		exit(0);
 	new->n = data;
+	new->v = 0;
 	new->next = NULL;
 	return (new);
 }
