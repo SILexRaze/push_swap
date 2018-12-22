@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/22 02:12:28 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/22 13:46:24 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 typedef struct		s_stack
 {
 	int				n;
+	int				v;
 	struct s_stack	*next;
 }					t_stack;
 
@@ -46,8 +47,13 @@ void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_print_stack(t_stack **begin_list);
 int					ft_stack_size(t_stack **begin_list);
 /*
+**	LIST SORT
+*/
+void				ft_stack_sort(t_data *data, t_stack **begon_list, int (*cmp)());
+int					ft_int_cmp(int a, int b);
+/*
 **	VERBOSE
 */
 void				ft_verb_stack(t_data *data);
-int					ft_max_elem(t_stack **begin_list);
+int					ft_min_elem(t_stack **begin_list);
 #endif

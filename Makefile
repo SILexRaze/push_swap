@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/22 02:01:42 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/22 12:56:35 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ SRCS		=		ft_read.c		\
 					ft_stack.c		\
 					ft_error.c		\
 					ft_verbose.c	\
+					ft_sort_list.c	\
 					main.c
 LIBFT		=		libft/
 OBJ			=		$(SRCS:.c=.o)

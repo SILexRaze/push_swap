@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/22 02:02:36 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/22 13:01:10 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int		main(int ac, char **av)
 	ft_parse_inst(data);
 	ft_read_arg(data, ac, av);
 	ft_print_stack(&data->a);
-	ft_verb_stack(data);
+//	ft_verb_stack(data);
+	ft_stack_sort(data, &data->a, &ft_int_cmp);
+//	ft_print_stack(&data->a);
 	(void)ac;
 	(void)av;
 	return (0);
