@@ -6,14 +6,14 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 15:24:39 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/22 02:12:28 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "libft/libft.h"
-
+# define SCREENW 100
 typedef struct		s_stack
 {
 	int				n;
@@ -45,4 +45,9 @@ void				ft_stack_pushback(t_stack **begin_list, int data);
 void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_print_stack(t_stack **begin_list);
 int					ft_stack_size(t_stack **begin_list);
+/*
+**	VERBOSE
+*/
+void				ft_verb_stack(t_data *data);
+int					ft_max_elem(t_stack **begin_list);
 #endif
