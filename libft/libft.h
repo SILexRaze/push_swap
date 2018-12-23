@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/05 17:49:46 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 15:02:36 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/23 14:48:28 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				ft_print_tab_int(int *tab);
+void				ft_print_tab_int(int *tab, int len);
 void				ft_print_tab_str(char **tab);
 void				ft_list_pushback(t_list **begin_list, char *data,
 					int len);

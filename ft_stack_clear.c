@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab_int.c                                 :+:      :+:    :+:   */
+/*   ft_stack_clear.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mabouce <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/11 16:18:45 by mabouce           #+#    #+#             */
-/*   Updated: 2018/12/23 14:51:10 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/23 14:12:04 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/23 14:15:43 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_print_tab_int(int *tab, int	len)
+void	ft_stack_clear(t_stack **begin_list)
 {
-	int	i;
+	t_stack	*tmp;
 
-	i = 0;
-	ft_putchar('|');
-	while (i < len)
+	tmp = NULL;
+	while (*begin_list)
 	{
-		ft_putnbr(tab[i]);
-		ft_putchar('|');
-		i++;
+		tmp = *begin_list;
+		*begin_list = (*begin_list)->next;
+		free(tmp);
 	}
-	ft_putchar('\n');
+	(*begin_list) = NULL;
 }

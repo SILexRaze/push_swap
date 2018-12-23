@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/22 21:38:45 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/23 15:11:12 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct		s_data
 	t_stack	*b;
 	char	**base;
 	int		n_inst;
+	int		*inst;
 }					t_data;
 /*
 **	PARSER
@@ -44,7 +45,9 @@ void				ft_error(void);
 t_stack				*ft_stack_create_elem(int data);
 void				ft_stack_pushback(t_stack **begin_list, int data);
 void				ft_stack_pushfront(t_stack **begin_list, int data);
+void				ft_stack_clear(t_stack **begin_list);
 void				ft_print_stack(t_stack **begin_list);
+void				ft_check_ifsort(t_stack	**begin_list);
 int					ft_stack_size(t_stack **begin_list);
 /*
 **	VERBOSE TEST
@@ -58,6 +61,8 @@ int					ft_int_cmp(int a, int b);
 void				ft_sa(t_data *data);
 void				ft_sb(t_data *data);
 void				ft_ss(t_data *data);
+void				ft_pa(t_data *data);
+void				ft_pb(t_data *data);
 /*
 **	VERBOSE
 */

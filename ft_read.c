@@ -6,12 +6,14 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 15:24:59 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/23 14:47:35 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
+
+void	(*g_tab[5])(t_data *data) = {ft_sa, ft_sb, ft_ss, ft_pa, ft_pb};
 
 void	ft_read_stdin(t_data *data)
 {
@@ -24,13 +26,17 @@ void	ft_read_stdin(t_data *data)
 		ft_strdel(&line);
 		data->n_inst++;
 	}
+	if (!(data->inst = (int *)ft_memalloc(sizeof(int) * data->n_inst)))
+		exit(0);
 }
 
 void	ft_parse_inst(t_data *data)
 {
 	t_list	*tmp;
 	size_t	j;
+	size_t	i;
 
+	i = 0;
 	tmp = data->list;
 	data->base = ft_init_inst_db();
 	while (tmp)
@@ -40,7 +46,7 @@ void	ft_parse_inst(t_data *data)
 		{
 			if (ft_strequ(data->base[j], tmp->data) == 1)
 			{
-				printf("|%zu|\n", j);
+				data->inst[i++] = j;
 				break ;
 			}
 			else if (j == 10)
@@ -49,6 +55,7 @@ void	ft_parse_inst(t_data *data)
 		}
 		tmp = tmp->next;
 	}
+	free(data->base);
 }
 
 void	ft_read_arg(t_data *data, int ac, char **av)

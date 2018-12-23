@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 12:52:03 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/22 13:01:42 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/23 15:13:53 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void    ft_stack_sort(t_data *data, t_stack **begin_list, int (*cmp)())
 	t_stack  *prev_list1;
 	t_stack  *prev_list2;
 	if ((begin_list != NULL) && ((*begin_list)) != NULL
-	&& (((*begin_list)->next) != NULL))
+			&& (((*begin_list)->next) != NULL))
 	{   
 		list1 = (*begin_list);
 		prev_list1 = NULL;
@@ -72,7 +72,8 @@ void    ft_stack_sort(t_data *data, t_stack **begin_list, int (*cmp)())
 				prev_list2 = list2;
 				list2 = list2->next;
 			}
-			ft_verb_stack(data);
+//			ft_verb_stack(data);
+			(void)data;
 			prev_list1 = list1;
 			list1 = list1->next;
 		}
