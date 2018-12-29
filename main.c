@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 20:06:11 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/29 20:14:11 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int		main(int ac, char **av)
 //	ft_verb_stack(data);
 //	ft_stack_sort(data, &data->a, &ft_int_cmp);
 	ft_exec(data);
-	ft_putchar('\n');
 	ft_check_ifsort(data);
 	ft_stack_clear(&data->a);
 	ft_stack_clear(&data->b);

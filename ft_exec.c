@@ -11,14 +11,7 @@ void	ft_exec(t_data *data)
 	while (i < data->n_inst)
 	{
 		g_tab[data->inst[i]](data);
-		ft_putchar('a');
-		ft_putchar('\n');
-		ft_print_stack(&data->a);
-		ft_putchar('\n');
-		ft_putchar('b');
-		ft_putchar('\n');
-		ft_print_stack(&data->b);
-		ft_putchar('\n');
+		ft_print_stack(data);
 		i++;
 	}
 }

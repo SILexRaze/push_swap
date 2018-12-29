@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 20:05:44 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/29 20:11:16 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_stack				*ft_stack_create_elem(int data);
 void				ft_stack_pushback(t_stack **begin_list, int data);
 void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_stack_clear(t_stack **begin_list);
-void				ft_print_stack(t_stack **begin_list);
+void				ft_print_stack(t_data *data);
 void				ft_check_ifsort(t_data *data);
 int					ft_stack_size(t_stack **begin_list);
 /*

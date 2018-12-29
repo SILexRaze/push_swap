@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:44:07 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/23 14:11:50 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/29 20:28:56 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,18 +71,35 @@ int		ft_stack_size(t_stack **begin_list)
 	return (i);
 }
 
-void	ft_print_stack(t_stack **begin_list)
+void	ft_print_stack(t_data	*data)
 {
-	t_stack	*tmp;
+	t_stack	*tmpa;
+	t_stack	*tmpb;
 
-	tmp = *begin_list;
-	if (tmp)
+	tmpa = data->a;
+	tmpb = data->b;
+	if (tmpa || tmpb)
 	{
-		while (tmp)
+		write(1, "\e[1;1H\e[2J", 12);
+		ft_putstr("\na\t|\tb\n-\t|\t-\n");
+		while (tmpa || tmpb)
 		{
-			ft_putnbr(tmp->n);
+			if (tmpa)
+			{
+				ft_putnbr(tmpa->n);
+				tmpa = tmpa->next;
+			}
+			ft_putchar('\t');
+			ft_putchar('|');
+			ft_putchar('\t');
+			if (tmpb)
+			{
+				ft_putnbr(tmpb->n);
+				tmpb = tmpb->next;
+			}
 			ft_putchar('\n');
-			tmp = tmp->next;
 		}
+		usleep(5000);
+		ft_putchar('\n');
 	}
 }
