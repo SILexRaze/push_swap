@@ -6,18 +6,23 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/23 15:07:38 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/23 15:14:09 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/29 20:06:05 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_check_ifsort(t_stack	**begin_list)
+void	ft_check_ifsort(t_data *data)
 {
 	t_stack	*tmp;
 	t_stack	*tmp2;
 
-	tmp = *begin_list;
+	if (data->b)
+	{
+		write(1 ,"KO\n", 3);
+		return ;
+	}
+	tmp = data->a;
 	tmp2 = NULL;
 	if (tmp)
 	{
@@ -27,7 +32,7 @@ void	ft_check_ifsort(t_stack	**begin_list)
 			if (tmp->n > tmp2->n)
 			{
 				ft_putstr("KO\n");
-				exit(0);
+				return ;
 			}
 			tmp = tmp->next;
 		}
