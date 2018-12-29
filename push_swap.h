@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/23 15:11:12 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/29 19:19:49 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,16 @@ void				ft_sb(t_data *data);
 void				ft_ss(t_data *data);
 void				ft_pa(t_data *data);
 void				ft_pb(t_data *data);
+void				ft_ra(t_data *data);
+void				ft_rb(t_data *data);
+void				ft_rr(t_data *data);
+void				ft_rra(t_data *data);
+void				ft_rrb(t_data *data);
+void				ft_rrr(t_data *data);
 /*
 **	VERBOSE
 */
 void				ft_verb_stack(t_data *data);
+void				ft_exec(t_data *data);
 int					ft_min_elem(t_stack **begin_list);
 #endif

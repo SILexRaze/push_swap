@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/23 15:10:48 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/29 19:19:28 by rvalenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,11 @@ SRCS		=		ft_read.c			\
 					ft_verbose.c		\
 					ft_sort_list.c		\
 					ft_op.c				\
+					ft_rotate_op.c		\
+					ft_rev_rot_op.c		\
 					ft_stack_clear.c	\
 					ft_check.c			\
+					ft_exec.c			\
 					main.c
 LIBFT		=		libft/
 OBJ			=		$(SRCS:.c=.o)

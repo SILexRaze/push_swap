@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/23 15:12:29 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/29 19:02:47 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,12 @@ int		main(int ac, char **av)
 		return (0);
 	ft_read_stdin(data);
 	ft_parse_inst(data);
-//	ft_print_list(&data->list);
 	ft_read_arg(data, ac, av);
-	ft_print_stack(&data->a);
 //	ft_verb_stack(data);
-	ft_stack_sort(data, &data->a, &ft_int_cmp);
-	ft_print_tab_int(data->inst, data->n_inst);
+//	ft_stack_sort(data, &data->a, &ft_int_cmp);
+	ft_exec(data);
 	ft_putchar('\n');
-	ft_putendl("a=");
-	ft_print_stack(&data->a);
-	ft_putendl("\nb=");
-	ft_print_stack(&data->b);
 	ft_check_ifsort(&data->a);
-
 	ft_stack_clear(&data->a);
 	ft_stack_clear(&data->b);
 	ft_list_del(&data->list);

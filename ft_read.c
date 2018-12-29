@@ -6,14 +6,12 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/23 14:47:35 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/29 19:07:59 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
-
-void	(*g_tab[5])(t_data *data) = {ft_sa, ft_sb, ft_ss, ft_pa, ft_pb};
 
 void	ft_read_stdin(t_data *data)
 {
