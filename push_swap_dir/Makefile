@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/30 12:59:58 by rvalenti         ###   ########.fr        #
+#    Updated: 2018/12/30 14:13:12 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,11 +30,9 @@ NAME		=		push_swap
 all:	$(NAME)
 
 $(NAME): $(OBJ)
-	make -C $(LIBFT)
 	$(CC) $(OBJ) -o $(NAME) -I $(LIBFT) -I includes/ -L $(LIBFT) -lft
 %.o: %.c
 	$(CC) -I $(LIBFT) -I . -c $< -o $@
-
 clean:
 	@rm -rf $(OBJ)
 	@make clean -C $(LIBFT)

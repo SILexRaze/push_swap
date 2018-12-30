@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 00:41:45 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 13:47:50 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct		s_data
 	t_list	*list;
 	t_stack	*a;
 	t_stack	*b;
+	int		verbose;
 	char	**base;
 	int		n_inst;
 	int		*inst;

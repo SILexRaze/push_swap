@@ -11,7 +11,8 @@ void	ft_exec(t_data *data)
 	while (i < data->n_inst)
 	{
 		g_tab[data->inst[i]](data);
-//		ft_print_stack(data);
+		if (data->verbose == 1)
+			ft_print_stack(data);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/30 00:46:54 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/30 00:52:22 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/30 14:14:08 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = ps
 all:	$(NAME)
 
 $(NAME):
+	make -C libft/
 	make -C push_swap_dir/
 	make -C checker_dir/
 	cp push_swap_dir/push_swap .
