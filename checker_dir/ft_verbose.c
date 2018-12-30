@@ -6,106 +6,70 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 01:51:43 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 19:52:31 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:54:53 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#include "checker.h"
 #include <unistd.h>
 
 void	ft_verb_stack(t_data *data)
 {
-	t_stack	*tmp;
-	int		max;
+	t_stack	*tmpa;
+	t_stack	*tmpb;
+	int		mina;
+	int		minb;
 	int		j;
 
-	max = ft_min_elem(&data->a);
-	tmp = data->a;
-	write(1, "\e[1;1H\e[2J", 12);
-	while (tmp)
+	mina = ft_min_elem(&data->a);
+	minb = ft_min_elem(&data->b);
+	tmpa = data->a;
+	tmpb = data->b;
+	system("clear");
+	while (tmpa || tmpb)
 	{
 		j = 0;
-		if (tmp->n > 0)
+		if (tmpa)
 		{
-			while (j < (tmp->n / max))
+			if (tmpa->n > 0)
 			{
-				ft_putchar('#');
-				j++;
+				while (j < (tmpa->n / mina))
+				{
+					ft_putchar('A');
+					j++;
+				}
 			}
+			else
+				ft_putchar('A');
+			tmpa = tmpa->next;
 		}
-		else
-			ft_putchar('#');
-		tmp = tmp->next;
+		j = 0;
+		ft_putstr("\t\t\t\t\t\t\t||\t\t\t\t\t\t\t");
+		if (tmpb)
+		{
+			if (tmpb->n > 0)
+			{
+				while (j < (tmpb->n / minb))
+				{
+					ft_putchar('B');
+					j++;
+				}
+			}
+			else
+				ft_putchar('B');
+			tmpb = tmpb->next;
+		}
 		ft_putchar('\n');
 	}
-	usleep(100000);
+	usleep(WAIT);
 }
-
-/*static void	ft_print_sharp(int n)
-  {
-  int	i;
-
-  i = -1;
-  while (++i < n)
-  ft_putchar('#');
-  ft_putchar('\n');
-  usleep(10000);
-  }*/
-
-/*void	ft_verb_stack(t_data *data)
-  {
-  t_stack	*tmp;
-  int		t;
-  int		j;
-  int		len;
-
-  j = 1;
-  len = ft_stack_size(&data->a);
-  while (j < len)
-  {
-  tmp = data->a;
-  t = tmp->n;
-  while (tmp)
-  {
-  if (tmp->n < t && tmp->v == 0)
-  t = tmp->n;
-  tmp = tmp->next;
-  }
-  tmp = data->a;
-  while (tmp)
-  {
-  if (tmp->n == t)
-  {
-  printf("ok%d\n", tmp->v);
-  tmp->v = j;
-  }
-  tmp = tmp->next;
-  }
-  j++;
-  }
-  tmp = data->a;
-  while (tmp)
-  {
-  t = tmp->v;
-  printf("/%d/\n", tmp->v);
-  while (t > 0)
-  {
-  ft_putchar('#');
-  t--;
-  }
-  ft_putchar('\n');
-  tmp = tmp->next;
-  }
-  usleep(10000);
-  }*/
 
 int		ft_min_elem(t_stack	**begin_list)
 {
 	t_stack	*tmp;
 	int		t;
 
-	t = 0;
+	t = 2147483647;
 	tmp = *begin_list;
 	while (tmp)
 	{
@@ -116,4 +80,32 @@ int		ft_min_elem(t_stack	**begin_list)
 	if (t == 0)
 		return (1);
 	return (t);
+}
+
+void	ft_print_stack(t_data	*data)
+{
+	t_stack	*tmpa;
+	t_stack	*tmpb;
+
+	tmpa = data->a;
+	tmpb = data->b;
+	system("clear");
+	ft_putstr("\na\t|\tb\n-\t|\t-\n");
+	while (tmpa || tmpb)
+	{
+		if (tmpa)
+		{
+			ft_putnbr(tmpa->n);
+			tmpa = tmpa->next;
+		}
+		ft_putstr("\t|\t");
+		if (tmpb)
+		{
+			ft_putnbr(tmpb->n);
+			tmpb = tmpb->next;
+		}
+		ft_putchar('\n');
+	}
+	usleep(WAIT);
+	ft_putchar('\n');
 }

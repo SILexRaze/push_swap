@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:44:07 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:20:12 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:58:58 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,35 +71,16 @@ int		ft_stack_size(t_stack **begin_list)
 	return (i);
 }
 
-void	ft_print_stack(t_data	*data)
+void	ft_stack_clear(t_stack **begin_list)
 {
-	t_stack	*tmpa;
-	t_stack	*tmpb;
+	t_stack	*tmp;
 
-	tmpa = data->a;
-	tmpb = data->b;
-	if (tmpa || tmpb)
+	tmp = NULL;
+	while (*begin_list)
 	{
-		system("clear");
-		ft_putstr("\na\t|\tb\n-\t|\t-\n");
-		while (tmpa || tmpb)
-		{
-			if (tmpa)
-			{
-				ft_putnbr(tmpa->n);
-				tmpa = tmpa->next;
-			}
-			ft_putchar('\t');
-			ft_putchar('|');
-			ft_putchar('\t');
-			if (tmpb)
-			{
-				ft_putnbr(tmpb->n);
-				tmpb = tmpb->next;
-			}
-			ft_putchar('\n');
-		}
-		usleep(50000);
-		ft_putchar('\n');
+		tmp = *begin_list;
+		*begin_list = (*begin_list)->next;
+		free(tmp);
 	}
+	(*begin_list) = NULL;
 }

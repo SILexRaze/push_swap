@@ -6,13 +6,13 @@
 /*   By: mabouce <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 16:18:45 by mabouce           #+#    #+#             */
-/*   Updated: 2018/12/29 20:08:34 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:55:38 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_print_tab_int(int *tab, int	len)
+void	ft_print_tab_int(int *tab, int len)
 {
 	int	i;
 

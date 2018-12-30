@@ -6,12 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 13:48:01 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:38:49 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#include "checker.h"
 
 int		main(int ac, char **av)
 {
@@ -24,8 +23,6 @@ int		main(int ac, char **av)
 	ft_read_stdin(data);
 	ft_parse_inst(data);
 	ft_read_arg(data, ac, av);
-//	ft_verb_stack(data);
-//	ft_stack_sort(data, &data->a, &ft_int_cmp);
 	ft_exec(data);
 	ft_check_ifsort(data);
 	ft_stack_clear(&data->a);

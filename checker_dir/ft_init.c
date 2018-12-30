@@ -6,11 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 13:32:56 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/20 13:49:29 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:39:25 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 char	**ft_init_inst_db(void)
 {

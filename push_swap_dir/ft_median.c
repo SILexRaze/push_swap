@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/29 23:34:09 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:51:34 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:57:42 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		*ft_list_to_tab(t_stack **begin_list, size_t n)
 	return (tab);
 }
 
-void	ft_sort_tab(int	*tab,  size_t size)
+void	ft_sort_tab(int *tab, size_t size)
 {
 	size_t	i;
 	int		tmp;

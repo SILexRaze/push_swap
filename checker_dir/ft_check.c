@@ -6,11 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/23 15:07:38 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 20:06:05 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/30 15:37:49 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	ft_check_ifsort(t_data *data)
 {
@@ -19,7 +19,7 @@ void	ft_check_ifsort(t_data *data)
 
 	if (data->b)
 	{
-		write(1 ,"KO\n", 3);
+		ft_putstr("KO\n");
 		return ;
 	}
 	tmp = data->a;

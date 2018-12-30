@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 00:25:13 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:23:38 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:57:47 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int		main(int ac, char **av)
 		return (0);
 	ft_read_arg(data, ac, av);
 	ft_quick_sort(data, ac - 1);
-//	else
-//		ft_spec_sort(data);
 	ft_print_inst(data);
 	return (0);
 }

@@ -1,4 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_rotate_op.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/12/30 15:49:26 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/30 15:49:49 by vifonne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "checker.h"
 
 void	ft_ra(t_data *data)
 {
@@ -7,7 +19,7 @@ void	ft_ra(t_data *data)
 	if (data->a)
 	{
 		tmp = data->a;
-		ft_stack_pushback(&tmp ,tmp->n);
+		ft_stack_pushback(&tmp, tmp->n);
 		data->a = data->a->next;
 		free(tmp);
 	}
@@ -20,7 +32,7 @@ void	ft_rb(t_data *data)
 	if (data->b)
 	{
 		tmp = data->b;
-		ft_stack_pushback(&tmp ,tmp->n);
+		ft_stack_pushback(&tmp, tmp->n);
 		data->b = data->b->next;
 		free(tmp);
 	}

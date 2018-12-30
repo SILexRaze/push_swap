@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 02:17:15 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 13:03:55 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/30 15:58:48 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_rra(t_data *data)
 		}
 		if (prev)
 		{
-			ft_stack_pushfront(&data->a ,tmp->n);
+			ft_stack_pushfront(&data->a, tmp->n);
 			free(tmp);
 			prev->next = NULL;
 		}
@@ -51,7 +51,7 @@ void	ft_rrb(t_data *data)
 		}
 		if (prev)
 		{
-			ft_stack_pushfront(&data->b ,tmp->n);
+			ft_stack_pushfront(&data->b, tmp->n);
 			free(tmp);
 			prev->next = NULL;
 		}

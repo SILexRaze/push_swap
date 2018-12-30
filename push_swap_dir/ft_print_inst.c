@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 14:20:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:40:54 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:57:24 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_print_inst(t_data *data)
 	t_stack	*tmp;
 
 	data->base = ft_init_inst_db();
-
 	tmp = data->inst;
 	while (tmp)
 	{
@@ -31,11 +30,6 @@ void	ft_print_inst(t_data *data)
 		else if (tmp->next && tmp->n == 5 && tmp->next->n == 6)
 		{
 			ft_putendl(data->base[7]);
-			tmp = tmp->next->next;
-		}
-		else if (tmp->next && tmp->n == 8 && tmp->next->n == 9)
-		{
-			ft_putendl(data->base[10]);
 			tmp = tmp->next->next;
 		}
 		else

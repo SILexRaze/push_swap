@@ -6,11 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:17:01 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 20:00:30 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/30 15:38:59 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker.h"
 
 void	ft_error(void)
 {

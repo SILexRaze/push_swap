@@ -6,14 +6,14 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:22:48 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 15:52:35 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "../libft/libft.h"
-
+# define WAIT 100000
 typedef struct		s_stack
 {
 	int				n;
@@ -60,8 +60,6 @@ void				ft_sort_tab(int *tab, size_t size);
 /*
 **	VERBOSE TEST
 */
-void				ft_stack_sort(t_data *data, t_stack **begon_list,
-						int (*cmp)());
 int					ft_int_cmp(int a, int b);
 /*
 **	OPERATION Push_swap
