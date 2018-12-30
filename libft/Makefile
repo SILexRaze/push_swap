@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/20 15:03:47 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/30 16:23:59 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,12 +40,12 @@ NAME		=		libft.a
 all:	$(NAME)
 
 %.o :	%.c ./libft.h
-	$(CC) -I ./libft.h -c -o $@ $<
+	@$(CC) -I ./libft.h -c -o $@ $<
+	@/bin/echo -n "#"
 
 $(NAME): $(OBJ)
-	$(CC) -I ./libft.h -c $(SRCS)
-	ar rcs $(NAME) $(OBJ)
-	echo "\n$(_WHITE)$(NAME)$(_GREEN)\t\t[OK]$(_END)"
+	@$(CC) -I ./libft.h -c $(SRCS)
+	@ar rcs $(NAME) $(OBJ)
 
 clean:
 	@rm -f $(OBJ)
