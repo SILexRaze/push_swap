@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/20 14:44:07 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 02:21:20 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 13:01:47 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	ft_print_stack(t_data	*data)
 	tmpb = data->b;
 	if (tmpa || tmpb)
 	{
-		write(1, "\e[1;1H\e[2J", 12);
+		write(1, "\e[1;1H\e[2J", 13);
 		ft_putstr("\na\t|\tb\n-\t|\t-\n");
 		while (tmpa || tmpb)
 		{
@@ -99,7 +99,7 @@ void	ft_print_stack(t_data	*data)
 			}
 			ft_putchar('\n');
 		}
-		usleep(100000);
+		usleep(50000);
 		ft_putchar('\n');
 	}
 }

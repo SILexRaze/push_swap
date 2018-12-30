@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/29 23:34:09 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 02:37:03 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 12:22:48 by rvalenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ft_sort_tab(int	*tab,  size_t size)
 	{
 		sort = 1;
 		i = 0;
-		while (i < size)
+		while (i < size - 1)
 		{
 			if (tab[i] > tab[i + 1])
 			{
