@@ -6,12 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 01:02:31 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 13:07:31 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/30 14:40:57 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 void	ft_quick_sort(t_data *data, int size)
 {
@@ -26,8 +25,7 @@ void	ft_quick_sort(t_data *data, int size)
 	while (i < pivot && data->a != NULL)
 	{
 		ft_rra(data);
-		printf("rra\n");
-		//		ft_print_stack(data);
+		ft_stack_pushback(&data->inst, 8);
 		i++;
 	}
 	ft_quick_sort(data, pivot);
@@ -35,8 +33,7 @@ void	ft_quick_sort(t_data *data, int size)
 	while (i > 0)
 	{
 		ft_pa(data);
-		printf("pa\n");
-		//		ft_print_stack(data);
+		ft_stack_pushback(&data->inst, 3);
 		i--;
 	}
 	ft_quick_sort(data, size - pivot);
@@ -52,16 +49,15 @@ int		ft_partition(t_data *data, int size, int pivot)
 		if (data->a->n >= pivot)
 		{
 			ft_ra(data);
-			printf("ra\n");
+			ft_stack_pushback(&data->inst, 5);
 			j++;
 		}
 		else
 		{
 			ft_pb(data);
-			printf("pb\n");
+			ft_stack_pushback(&data->inst, 4);
 		}
 		size--;
-		//		ft_print_stack(data);
 	}
 	return (j);
 }
