@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/29 23:34:09 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 00:18:52 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 02:37:03 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,14 @@ void	ft_sort_tab(int	*tab,  size_t size)
 	}
 }
 
-int		ft_median(int *tab, size_t size)
+int		ft_median(t_stack **begin_list, int size)
 {
-	return (tab[size / 2]);
+	int n;
+	int	*tab;
+
+	tab = ft_list_to_tab(begin_list, size);
+	ft_sort_tab(tab, size);
+	n = tab[size / 2];
+	free(tab);
+	return (n);
 }

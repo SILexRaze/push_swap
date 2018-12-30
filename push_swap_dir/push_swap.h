@@ -6,13 +6,13 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 23:51:38 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/30 02:07:39 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include "libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct		s_stack
 {
@@ -23,22 +23,18 @@ typedef struct		s_stack
 
 typedef struct		s_data
 {
-	t_list	*list;
+	t_stack	*inst;
 	t_stack	*a;
 	t_stack	*b;
 	char	**base;
-	int		n_inst;
-	int		*inst;
 }					t_data;
 /*
 **	PARSER
 */
-char				**ft_init_inst_db(void);
 int					ft_check_double(t_stack *a, int n);
-void				ft_read_stdin(t_data *data);
-void				ft_parse_inst(t_data *data);
 void				ft_read_arg(t_data *data, int ac, char **av);
 void				ft_error(void);
+char				**ft_init_inst_db(void);
 /*
 **	LIST STACK
 */
@@ -47,21 +43,14 @@ void				ft_stack_pushback(t_stack **begin_list, int data);
 void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_stack_clear(t_stack **begin_list);
 void				ft_print_stack(t_data *data);
-void				ft_check_ifsort(t_data *data);
+int					ft_check_ifnsort(t_data *data, int n);
 int					ft_stack_size(t_stack **begin_list);
 /*
 **	MEDIAN
 */
-int					ft_median(int *tab, size_t size);
+int					ft_median(t_stack **begin_list, int size);
 int					*ft_list_to_tab(t_stack **begin_list, size_t n);
 void				ft_sort_tab(int *tab, size_t size);
-
-/*
-**	VERBOSE TEST
-*/
-void				ft_stack_sort(t_data *data, t_stack **begon_list,
-						int (*cmp)());
-int					ft_int_cmp(int a, int b);
 /*
 **	OPERATION Push_swap
 */
@@ -77,9 +66,8 @@ void				ft_rra(t_data *data);
 void				ft_rrb(t_data *data);
 void				ft_rrr(t_data *data);
 /*
-**	VERBOSE
+**	SORT
 */
-void				ft_verb_stack(t_data *data);
-void				ft_exec(t_data *data);
-int					ft_min_elem(t_stack **begin_list);
+void				ft_quick_sort(t_data *data, int size);
+int					ft_partition(t_data *data, int size, int pivot);
 #endif

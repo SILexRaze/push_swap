@@ -6,55 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/29 19:07:59 by rvalenti         ###   ########.fr       */
+/*   Updated: 2018/12/30 01:02:06 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-
-void	ft_read_stdin(t_data *data)
-{
-	char	*line;
-
-	line = NULL;
-	while (get_next_line(0, &line) > 0)
-	{
-		ft_list_pushback(&data->list, ft_strdup(line), ft_strlen(line));
-		ft_strdel(&line);
-		data->n_inst++;
-	}
-	if (!(data->inst = (int *)ft_memalloc(sizeof(int) * data->n_inst)))
-		exit(0);
-}
-
-void	ft_parse_inst(t_data *data)
-{
-	t_list	*tmp;
-	size_t	j;
-	size_t	i;
-
-	i = 0;
-	tmp = data->list;
-	data->base = ft_init_inst_db();
-	while (tmp)
-	{
-		j = 0;
-		while (data->base[j])
-		{
-			if (ft_strequ(data->base[j], tmp->data) == 1)
-			{
-				data->inst[i++] = j;
-				break ;
-			}
-			else if (j == 10)
-				ft_error();
-			j++;
-		}
-		tmp = tmp->next;
-	}
-	free(data->base);
-}
 
 void	ft_read_arg(t_data *data, int ac, char **av)
 {
