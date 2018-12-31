@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/30 16:22:43 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/31 11:47:26 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS		=		ft_median.c		\
 					ft_init.c		\
 					ft_quick_sort.c	\
 					ft_print_inst.c	\
-					ft_check.c		\
+					ft_ifsort.c		\
 					ft_push_swap.c
 LIBFT		=		../libft/
 OBJ			=		$(SRCS:.c=.o)

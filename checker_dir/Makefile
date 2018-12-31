@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/30 16:22:26 by vifonne          ###   ########.fr        #
+#    Updated: 2018/12/31 11:47:49 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRCS		=		ft_read.c			\
 					ft_op.c				\
 					ft_rotate_op.c		\
 					ft_rev_rot_op.c		\
-					ft_check.c			\
 					ft_exec.c			\
 					ft_checker.c
 LIBFT		=		../libft/

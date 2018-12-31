@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 15:52:35 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/31 11:48:24 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/31 11:48:52 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef CHECKER_H
+# define CHECKER_H
 # include "../libft/libft.h"
 # define WAIT 100000
+
 typedef struct		s_stack
 {
 	int				n;
 	int				v;
 	struct s_stack	*next;
 }					t_stack;
-
 typedef struct		s_data
 {
 	t_list	*list;
