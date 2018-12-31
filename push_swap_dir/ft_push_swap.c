@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 16:32:10 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 16:32:47 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/31 22:27:57 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,12 @@ int		main(int ac, char **av)
 	}
 	if (ac - 1 > 10)
 		ft_quick_sort(data, ac - 1);
-	else
+	else if (ac - 1 > 3)
 		ft_insert_sort(data, ac - 1);
+	else if (ac - 1 == 3)
+		ft_spec_sort(data);
+	else if (ac - 1 == 2)
+		ft_spec_tsort(data);
 	ft_print_inst(data);
 	ft_free_struct(data);
 	return (0);
