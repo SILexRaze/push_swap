@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_push_swap.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/30 00:25:13 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 13:45:55 by vifonne          ###   ########.fr       */
+/*   Created: 2018/12/31 16:32:10 by vifonne           #+#    #+#             */
+/*   Updated: 2018/12/31 16:32:47 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_free_struct(t_data *data)
+{
+	if (data->inst)
+		free(data->inst);
+	if (data->a)
+		ft_stack_clear(&data->a);
+	if (data->b)
+		ft_stack_clear(&data->b);
+	if (data->base)
+		free(data->base);
+	free(data);
+}
 
 int		main(int ac, char **av)
 {
@@ -21,7 +34,16 @@ int		main(int ac, char **av)
 	if (!(data = (t_data *)ft_memalloc(sizeof(t_data))))
 		return (0);
 	ft_read_arg(data, ac, av);
-	ft_quick_sort(data, ac - 1);
+	if (ft_check_ifnsort(data, ac - 1))
+	{
+		ft_free_struct(data);
+		return (0);
+	}
+	if (ac - 1 > 10)
+		ft_quick_sort(data, ac - 1);
+	else
+		ft_insert_sort(data, ac - 1);
 	ft_print_inst(data);
+	ft_free_struct(data);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 13:23:41 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/31 16:33:33 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_stack_clear(t_stack **begin_list);
 void				ft_print_inst(t_data *data);
 void				ft_optimize_ninst(t_data *data);
+void				ft_free_struct(t_data *data);
 int					ft_check_ifnsort(t_data *data, int n);
 int					ft_stack_size(t_stack **begin_list);
 /*
@@ -70,6 +71,7 @@ void				ft_rrr(t_data *data);
 /*
 **	SORT
 */
+void				ft_insert_sort(t_data *data, int size);
 void				ft_quick_sort(t_data *data, int size);
 int					ft_partition(t_data *data, int size, int pivot);
 #endif
