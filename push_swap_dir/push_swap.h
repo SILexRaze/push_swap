@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 14:23:12 by vifonne          ###   ########.fr       */
+/*   Updated: 2018/12/31 12:26:53 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct		s_stack
 typedef struct		s_data
 {
 	t_stack	*inst;
+	t_stack	*opti;
 	t_stack	*a;
 	t_stack	*b;
 	char	**base;
@@ -44,6 +45,7 @@ void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_stack_clear(t_stack **begin_list);
 void				ft_print_stack(t_data *data);
 void				ft_print_inst(t_data *data);
+void				ft_optimize_ninst(t_data *data);
 int					ft_check_ifnsort(t_data *data, int n);
 int					ft_stack_size(t_stack **begin_list);
 /*
