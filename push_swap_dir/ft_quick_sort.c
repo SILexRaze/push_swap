@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 01:02:31 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 15:36:43 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 15:16:19 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,14 @@ void	ft_quick_sort(t_data *data, int size)
 	pivot = ft_partition(data, size, pivot);
 	while (i < pivot && data->a != NULL)
 	{
-		ft_rra(data);
-		ft_stack_pushback(&data->inst, 8);
+		ft_prra(data);
 		i++;
 	}
 	ft_quick_sort(data, pivot);
 	i = size - pivot;
 	while (i > 0)
 	{
-		ft_pa(data);
-		ft_stack_pushback(&data->inst, 3);
+		ft_ppa(data);
 		i--;
 	}
 	ft_quick_sort(data, size - pivot);
@@ -48,15 +46,11 @@ int		ft_partition(t_data *data, int size, int pivot)
 	{
 		if (data->a->n >= pivot)
 		{
-			ft_ra(data);
-			ft_stack_pushback(&data->inst, 5);
+			ft_pra(data);
 			j++;
 		}
 		else
-		{
-			ft_pb(data);
-			ft_stack_pushback(&data->inst, 4);
-		}
+			ft_ppb(data);
 		size--;
 	}
 	return (j);

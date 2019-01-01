@@ -6,14 +6,14 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 01:51:43 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 11:45:00 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 15:18:01 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include <unistd.h>
 
-void	ft_verb_stack(t_data *data)
+void		ft_verb_stack(t_data *data)
 {
 	t_stack	*tmpa;
 	t_stack	*tmpb;
@@ -35,12 +35,12 @@ void	ft_verb_stack(t_data *data)
 			{
 				while (j < (tmpa->n / mina))
 				{
-					ft_putchar('A');
+					ft_putchar('#');
 					j++;
 				}
 			}
 			else
-				ft_putchar('A');
+				ft_putchar('#');
 			tmpa = tmpa->next;
 		}
 		j = 0;
@@ -51,12 +51,12 @@ void	ft_verb_stack(t_data *data)
 			{
 				while (j < (tmpb->n / minb))
 				{
-					ft_putchar('B');
+					ft_putchar('#');
 					j++;
 				}
 			}
 			else
-				ft_putchar('B');
+				ft_putchar('#');
 			tmpb = tmpb->next;
 		}
 		ft_putchar('\n');
@@ -64,7 +64,7 @@ void	ft_verb_stack(t_data *data)
 	usleep(WAIT);
 }
 
-int		ft_min_elem(t_stack	**begin_list)
+int			ft_min_elem(t_stack **begin_list)
 {
 	t_stack	*tmp;
 	int		t;
@@ -82,7 +82,7 @@ int		ft_min_elem(t_stack	**begin_list)
 	return (t);
 }
 
-void	ft_print_stack(t_data	*data)
+void		ft_print_stack(t_data *data)
 {
 	t_stack	*tmpa;
 	t_stack	*tmpb;

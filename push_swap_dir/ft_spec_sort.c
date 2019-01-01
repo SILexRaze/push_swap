@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 21:40:12 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 22:29:52 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 15:09:57 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,43 +15,27 @@
 void	ft_spec_sort(t_data *data)
 {
 	if (ft_ifasb(data) && !ft_ifbsc(data) && !ft_ifasc(data))
-	{
-		ft_sa(data);
-		ft_stack_pushback(&data->inst, 0);
-	}
+		ft_psa(data);
 	else if (ft_ifasb(data) && !ft_ifbsc(data) && ft_ifasc(data))
-	{
-		ft_ra(data);
-		ft_stack_pushback(&data->inst, 5);
-	}
+		ft_pra(data);
 	else if (!ft_ifasb(data) && ft_ifbsc(data) && !ft_ifasc(data))
 	{
-		ft_rra(data);
-		ft_stack_pushback(&data->inst, 8);
-		ft_sa(data);
-		ft_stack_pushback(&data->inst, 0);
+		ft_prra(data);
+		ft_psa(data);
 	}
 	else if (!ft_ifasb(data) && ft_ifbsc(data) && ft_ifasc(data))
-	{
-		ft_rra(data);
-		ft_stack_pushback(&data->inst, 8);
-	}
+		ft_prra(data);
 	else
 	{
-		ft_ra(data);
-		ft_stack_pushback(&data->inst, 5);
-		ft_sa(data);
-		ft_stack_pushback(&data->inst, 0);
+		ft_pra(data);
+		ft_psa(data);
 	}
 }
 
 void	ft_spec_tsort(t_data *data)
 {
 	if (data->a->n > data->a->next->n)
-	{
-		ft_sa(data);
-		ft_stack_pushback(&data->inst, 0);
-	}
+		ft_psa(data);
 }
 
 int		ft_ifasb(t_data *data)

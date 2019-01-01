@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 22:28:59 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 15:11:22 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,27 @@ void				ft_rra(t_data *data);
 void				ft_rrb(t_data *data);
 void				ft_rrr(t_data *data);
 /*
+**	OPERATION Pre_pushed
+*/
+void				ft_psa(t_data *data);
+void				ft_psb(t_data *data);
+void				ft_pss(t_data *data);
+void				ft_ppa(t_data *data);
+void				ft_ppb(t_data *data);
+void				ft_pra(t_data *data);
+void				ft_prb(t_data *data);
+void				ft_prr(t_data *data);
+void				ft_prra(t_data *data);
+void				ft_prrb(t_data *data);
+void				ft_prrr(t_data *data);
+
+/*
 **	SORT
 */
 void				ft_spec_tsort(t_data *data);
 void				ft_spec_sort(t_data *data);
 void				ft_insert_sort(t_data *data, int size);
+void				ft_allpb(t_data *data, int size);
 void				ft_quick_sort(t_data *data, int size);
 int					ft_partition(t_data *data, int size, int pivot);
 int					ft_ifasb(t_data *data);

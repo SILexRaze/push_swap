@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 14:20:23 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 16:09:41 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 14:48:42 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 void	ft_optimize_ninst(t_data *data)
 {
-	int		i;
 	int		trig;
 	t_stack	*tmp;
 
-	i = 0;
 	trig = 0;
 	data->opti = 0;
 	tmp = data->inst;
