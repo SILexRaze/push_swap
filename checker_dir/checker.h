@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 11:48:24 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 11:48:52 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 16:33:11 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ t_stack				*ft_stack_create_elem(int data);
 void				ft_stack_pushback(t_stack **begin_list, int data);
 void				ft_stack_pushfront(t_stack **begin_list, int data);
 void				ft_stack_clear(t_stack **begin_list);
-void				ft_print_stack(t_data *data);
 void				ft_check_ifsort(t_data *data);
 int					ft_stack_size(t_stack **begin_list);
 /*
@@ -57,10 +56,6 @@ int					ft_median(int *tab, size_t size);
 int					*ft_list_to_tab(t_stack **begin_list, size_t n);
 void				ft_sort_tab(int *tab, size_t size);
 
-/*
-**	VERBOSE TEST
-*/
-int					ft_int_cmp(int a, int b);
 /*
 **	OPERATION Push_swap
 */
@@ -78,7 +73,9 @@ void				ft_rrr(t_data *data);
 /*
 **	VERBOSE
 */
-void				ft_verb_stack(t_data *data);
+void				ft_print_stack(t_data *data);
+void				ft_write_a(int n, int isnum);
+void				ft_write_b(int n, int isnum);
+int					ft_nblen(int n);
 void				ft_exec(t_data *data);
-int					ft_min_elem(t_stack **begin_list);
 #endif

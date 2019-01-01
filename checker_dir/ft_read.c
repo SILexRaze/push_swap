@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 16:12:12 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 16:12:57 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	ft_read_arg(t_data *data, int ac, char **av)
 
 	i = 1;
 	data->b = NULL;
-	if (ft_strequ(av[1], "-v1") == 1)
+	if (ft_strequ(av[1], "-v") == 1)
 	{
 		data->verbose = 1;
 		i++;
