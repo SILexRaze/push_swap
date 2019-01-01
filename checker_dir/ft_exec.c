@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 15:39:08 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/31 11:46:31 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 16:12:10 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ void	ft_exec(t_data *data)
 	{
 		tab[data->inst[i]](data);
 		if (data->verbose == 1)
-			ft_verb_stack(data);
-		else if (data->verbose == 2)
 			ft_print_stack(data);
 		i++;
 	}

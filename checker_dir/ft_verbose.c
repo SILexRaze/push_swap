@@ -6,63 +6,12 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 01:51:43 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 15:18:01 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 16:12:14 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 #include <unistd.h>
-
-void		ft_verb_stack(t_data *data)
-{
-	t_stack	*tmpa;
-	t_stack	*tmpb;
-	int		mina;
-	int		minb;
-	int		j;
-
-	mina = ft_min_elem(&data->a);
-	minb = ft_min_elem(&data->b);
-	tmpa = data->a;
-	tmpb = data->b;
-	system("clear");
-	while (tmpa || tmpb)
-	{
-		j = 0;
-		if (tmpa)
-		{
-			if (tmpa->n > 0)
-			{
-				while (j < (tmpa->n / mina))
-				{
-					ft_putchar('#');
-					j++;
-				}
-			}
-			else
-				ft_putchar('#');
-			tmpa = tmpa->next;
-		}
-		j = 0;
-		ft_putstr("\t\t\t\t\t\t\t||\t\t\t\t\t\t\t");
-		if (tmpb)
-		{
-			if (tmpb->n > 0)
-			{
-				while (j < (tmpb->n / minb))
-				{
-					ft_putchar('#');
-					j++;
-				}
-			}
-			else
-				ft_putchar('#');
-			tmpb = tmpb->next;
-		}
-		ft_putchar('\n');
-	}
-	usleep(WAIT);
-}
 
 int			ft_min_elem(t_stack **begin_list)
 {
