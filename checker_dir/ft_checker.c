@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2018/12/30 15:38:49 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:01:32 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,14 @@ int		main(int ac, char **av)
 		return (0);
 	if (!(data = (t_data*)ft_memalloc(sizeof(t_data))))
 		return (0);
-	ft_read_stdin(data);
+	if (ft_strequ(av[1], "-f") == 1)
+	{
+		ft_read_stdin(data, av[2]);
+		av += 2;
+		ac -= 2;
+	}
+	else
+		ft_read_stdin(data, NULL);
 	ft_parse_inst(data);
 	ft_read_arg(data, ac, av);
 	ft_exec(data);

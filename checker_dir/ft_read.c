@@ -6,18 +6,28 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 18:24:05 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 16:12:57 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:04:41 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	ft_read_stdin(t_data *data)
+void	ft_read_stdin(t_data *data, char *filename)
 {
 	char	*line;
+	int		fd;
 
+	if (!filename)
+		fd = 0;
+	else
+		fd = open(filename, O_RDONLY);
+	if (fd < 0)
+	{
+		ft_putendl("Can't open file, checker will read StdIn (0) instead");
+		fd = 0;
+	}
 	line = NULL;
-	while (get_next_line(0, &line) > 0)
+	while (get_next_line(fd, &line) > 0)
 	{
 		ft_list_pushback(&data->list, ft_strdup(line), ft_strlen(line));
 		ft_strdel(&line);
@@ -25,6 +35,8 @@ void	ft_read_stdin(t_data *data)
 	}
 	if (!(data->inst = (int *)ft_memalloc(sizeof(int) * data->n_inst)))
 		exit(0);
+	if (filename)
+		close(fd);
 }
 
 void	ft_parse_inst(t_data *data)

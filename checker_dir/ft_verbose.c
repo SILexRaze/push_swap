@@ -6,12 +6,11 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 01:51:43 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 16:48:22 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:04:42 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
-#include <unistd.h>
 
 void		ft_print_stack(t_data *data)
 {

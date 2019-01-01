@@ -6,13 +6,15 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 11:48:24 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 16:33:11 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:03:56 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../libft/libft.h"
+# include <fcntl.h>
+# include <unistd.h>
 # define WAIT 100000
 
 typedef struct		s_stack
@@ -36,7 +38,7 @@ typedef struct		s_data
 */
 char				**ft_init_inst_db(void);
 int					ft_check_double(t_stack *a, int n);
-void				ft_read_stdin(t_data *data);
+void				ft_read_stdin(t_data *data, char *filename);
 void				ft_parse_inst(t_data *data);
 void				ft_read_arg(t_data *data, int ac, char **av);
 void				ft_error(void);
