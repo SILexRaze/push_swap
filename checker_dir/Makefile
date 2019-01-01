@@ -6,7 +6,7 @@
 #    By: vifonne <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:05:19 by vifonne           #+#    #+#              #
-#    Updated: 2018/12/31 16:24:50 by vifonne          ###   ########.fr        #
+#    Updated: 2019/01/01 17:51:01 by vifonne          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS		=		ft_read.c			\
 					ft_checker.c
 LIBFT		=		../libft/
 OBJ			=		$(SRCS:.c=.o)
-CC			=		gcc -Wall -Wextra -Werror
+CC			=		gcc -Wall -Wextra -Werror -g
 NAME		=		checker
 .PHONY		=		all $(NAME) $(OBJ) clean fclean re
 

@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 19:53:53 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 17:01:32 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:40:23 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		main(int ac, char **av)
 	ft_check_ifsort(data);
 	ft_stack_clear(&data->a);
 	ft_stack_clear(&data->b);
+	free(data->inst);
 	ft_list_del(&data->list);
 	free(data);
 	return (0);

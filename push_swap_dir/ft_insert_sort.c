@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 15:36:49 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 15:15:11 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 17:26:17 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,26 @@ void	ft_insert_sort(t_data *data, int size)
 	int	j;
 	int	i;
 
-	i = 1;
+	i = 2;
 	ft_allpb(data, size);
-	while (++i < size)
+	while (i < size)
 	{
-		j = -1;
+		j = 0;
 		if (data->a)
 		{
-			while (data->a->n < data->b->n && ++j < i)
+			while (data->a->n < data->b->n && j < i)
+			{
 				ft_pra(data);
+				j++;
+			}
 		}
 		ft_ppa(data);
-		while (j)
+		while (j > 0)
 		{
 			ft_prra(data);
 			j--;
 		}
+		i++;
 	}
 }
 
