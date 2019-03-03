@@ -6,7 +6,7 @@
 /*   By: vifonne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/31 11:48:24 by vifonne           #+#    #+#             */
-/*   Updated: 2019/01/01 17:03:56 by vifonne          ###   ########.fr       */
+/*   Updated: 2019/01/01 22:05:46 by vifonne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "../libft/libft.h"
 # include <fcntl.h>
 # include <unistd.h>
-# define WAIT 100000
+# define WAIT 10000
 
 typedef struct		s_stack
 {
